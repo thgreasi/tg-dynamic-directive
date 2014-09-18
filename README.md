@@ -1,7 +1,7 @@
 tg-dynamic-directive
 ====================
 
-A simple directive to dynamically load proper directive, based on the characteristics of the provided model.
+A simple directive to dynamically load proper view, based on the characteristics of the provided model.
 
 #Example Code
 

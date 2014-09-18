@@ -1,0 +1,25 @@
+{
+  "boss": true,
+  "browser": true,
+  "curly": true,
+  "eqnull": true,
+  "expr": true,
+  "immed": true,
+  "indent": 2,
+  "laxbreak": true,
+  "loopfunc": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "quotmark": true,
+  "smarttabs": true,
+  "strict": true,
+  "sub": true,
+  "trailing": true,
+  "undef": true,
+  "unused": "var",
+  "globals": {
+    "angular": false
+  }
+}
