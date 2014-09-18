@@ -3,7 +3,7 @@ tg-dynamic-directive
 
 A simple directive to dynamically load proper view, based on the characteristics of the provided model.
 
-#Example Code
+#Usage
 
 ```html
 <div ng-repeat="pagePart in pageParts">
@@ -35,3 +35,7 @@ myapp.controller('myController', function ($scope) {
   };
 });
 ```
+
+#Examples
+
+[Sortable tree with dynamic template](http://codepen.io/thgreasi/pen/uyHFC)
