@@ -1,6 +1,6 @@
 {
   "name": "tg-dynamic-directive",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple directive to dynamically load proper view, based on the characteristics of the provided model.",
   "author": "https://github.com/thgreasi/tg-dynamic-directive/graphs/contributors",
   "license": "MIT",
