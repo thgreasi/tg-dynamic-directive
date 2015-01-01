@@ -2,6 +2,21 @@ angular.module('tg.dynamicDirective', [])
     .directive('tgDynamicDirective', ['$compile',
         function($compile) {
             'use strict';
+
+            function templateUrlProvider(getView, ngModelItem) {
+                if (getView) {
+                    if (typeof getView === 'function') {
+                        var templateUrl = getView(ngModelItem) || '';
+                        if (templateUrl) {
+                            return templateUrl;
+                        }
+                    } else if (typeof getView === 'string' && getView.length) {
+                        return getView;
+                    }
+                }
+                return '';
+            }
+
             return {
                 restrict: 'E',
                 require: '^ngModel',
@@ -9,16 +24,14 @@ angular.module('tg.dynamicDirective', [])
                 template: '<div ng-include="templateUrl"></div>',
                 link: function(scope, element, attrs, ngModel) {
                     var ngModelItem = scope.$eval(attrs.ngModel);
-                    scope.ngModelItem = ngModelItem;
-                    scope.templateUrl = '';
-
                     var getView = scope.$eval(attrs.tgDynamicDirectiveView);
-                    if (getView && typeof getView === 'function') {
-                        var templateUrl = getView(ngModelItem);
-                        if (templateUrl) {
-                            scope.templateUrl = templateUrl;
-                        }
-                    }
+                    scope.ngModelItem = ngModelItem;
+
+                    scope.$watch(function() {
+                        return templateUrlProvider(getView, ngModelItem);
+                    }, function(newValue, oldValue) {
+                        scope.templateUrl = newValue;
+                    });
                 }
             };
         }
