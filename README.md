@@ -38,4 +38,5 @@ myapp.controller('myController', function ($scope) {
 
 #Examples
 
-[Sortable tree with dynamic template](http://codepen.io/thgreasi/pen/uyHFC)
+* [Sortable tree with dynamic template](http://codepen.io/thgreasi/pen/uyHFC)
+* [Sortable tree with dynamic changing template](http://codepen.io/thgreasi/pen/emBJQL)
