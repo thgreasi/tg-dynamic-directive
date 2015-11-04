@@ -23,11 +23,11 @@ angular.module('tg.dynamicDirective', [])
                 scope: true,
                 template: '<div ng-include="templateUrl"></div>',
                 link: function(scope, element, attrs, ngModel) {
-                    var ngModelItem = scope.$eval(attrs.ngModel);
-                    var getView = scope.$eval(attrs.tgDynamicDirectiveView);
-                    scope.ngModelItem = ngModelItem;
 
                     scope.$watch(function() {
+                        var ngModelItem = scope.$eval(attrs.ngModel);
+                        var getView = scope.$eval(attrs.tgDynamicDirectiveView);
+                        scope.ngModelItem = ngModelItem;
                         return templateUrlProvider(getView, ngModelItem);
                     }, function(newValue, oldValue) {
                         scope.templateUrl = newValue;
