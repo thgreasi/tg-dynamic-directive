@@ -1,5 +1,6 @@
 tg-dynamic-directive
 ====================
+[![npm](https://img.shields.io/npm/dm/tg-dynamic-directive.svg)](https://www.npmjs.com/package/tg-dynamic-directive)
 
 A simple directive to dynamically load proper view, based on the characteristics of the provided model.
 
